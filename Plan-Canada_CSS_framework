@@ -1,0 +1,825 @@
+The Grid
+
+.row {
+	width: 1340px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.row.collapse {
+	width: 100%;
+}
+
+.row .row,
+.row.collapse .row.rowFix {
+	width: auto;
+	max-width: none;
+	min-width: 0;
+	margin: 0 -30px;
+}
+
+
+/*rows inside rows have a negative margin that is equal to the padding of the columns*/
+
+.row.collapse .row {
+	width: 1340px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.columns {
+	float: left;
+	min-height: 1px;
+	position: relative;
+	padding: 0 30px;
+	margin: 0;
+}
+
+.columns.centered {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+[class*="columns"]+[class*="columns"]:last-child {
+	float: right;
+}
+
+
+/*this is saying find all last columns in a row that are directly adjacent to another column - therefore a row with at least 2 columns*/
+
+[class*="columns"]+[class*="columns"].end {
+	float: left;
+}
+
+
+/*the end class is to overwrite the float right for last columns.. sometimes you may not want to float the last one right*/
+
+
+/*grid column options*/
+
+.one,
+.large-1 {
+	width: 8.333%;
+}
+
+.two,
+.large-2 {
+	width: 16.666%;
+}
+
+.three,
+.large-3 {
+	width: 25%;
+}
+
+.four,
+.large-4 {
+	width: 33.333%;
+}
+
+.five,
+.large-5 {
+	width: 41.6666%;
+}
+
+.six,
+.large-6 {
+	width: 50%;
+}
+
+.seven,
+.large-7 {
+	width: 58.333%;
+}
+
+.eight,
+.large-8 {
+	width: 66.666%;
+}
+
+.nine,
+.large-9 {
+	width: 75%;
+}
+
+.ten,
+.large-10 {
+	width: 83.3333%;
+}
+
+.eleven,
+.large-11 {
+	width: 91.66666%;
+}
+
+.twelve,
+.large-12 {
+	width: 100%;
+}
+
+.seven-half {
+	width: 62.5%
+}
+
+.four-half {
+	width: 37.5%
+}
+
+.two-half {
+	width: 20%;
+}
+
+
+/*centering columns*/
+
+.centered {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/*use to offset rows by various factors*/
+
+.offset-by-one {
+	margin-left: 8.333%;
+}
+
+.offset-by-two {
+	margin-left: 16.666%;
+}
+
+.offset-by-three {
+	margin-left: 25%;
+}
+
+.offset-by-four {
+	margin-left: 33.3333%;
+}
+
+.offset-by-five {
+	margin-left: 41.6666%;
+}
+
+.offset-by-six {
+	margin-left: 50%;
+}
+
+.offset-by-seven {
+	margin-left: 58.3333%;
+}
+
+.offset-by-eight {
+	margin-left: 66.66666%;
+}
+
+.offset-by-nine {
+	margin-left: 75%;
+}
+
+.offset-by-ten {
+	margin-left: 83.33333%;
+}
+
+
+/* Source Ordering */
+
+.push-one {
+	left: 8.333%;
+}
+
+.pull-one {
+	right: 8.333%;
+}
+
+.push-two {
+	left: 16.666%;
+}
+
+.pull-two {
+	right: 16.666%;
+}
+
+.push-three {
+	left: 25%;
+}
+
+.pull-three {
+	right: 25%;
+}
+
+.push-four {
+	left: 33.3333%;
+}
+
+.pull-four {
+	right: 33.3333%;
+}
+
+.push-five {
+	left: 41.666%;
+}
+
+.pull-five {
+	right: 41.666%;
+}
+
+.push-six {
+	left: 50%;
+}
+
+.pull-six {
+	right: 50%;
+}
+
+.push-seven {
+	left: 58.33333%;
+}
+
+.pull-seven {
+	right: 58.3333%;
+}
+
+.push-eight {
+	left: 66.6666%;
+}
+
+.pull-eight {
+	right: 66.6666%;
+}
+
+.push-nine {
+	left: 75%;
+}
+
+.pull-nine {
+	right: 75%;
+}
+
+.push-ten {
+	left: 83.333%;
+}
+
+.pull-ten {
+	right: 83.333%;
+}
+
+Colours .blue {
+	color: #0072ce;
+}
+
+.blue_bkg {
+	background: #0072ce;
+}
+
+.blue2 {
+	color: #58cae7;
+}
+
+.blue2_bkg {
+	background: #58cae7;
+}
+
+.black {
+	#000;
+}
+
+.bloom {
+	color: #EF008C;
+}
+
+.bloom_bkg,
+.content.bloom_bkg {
+	background: #EF008C;
+}
+
+.yellow {
+	color: #f1c400;
+}
+
+.yellow_bkg {
+	background: #f1c400;
+}
+
+.green {
+	color: #00843D;
+}
+
+.grey_bkg {
+	background: #f2f2f2;
+}
+
+.content.grey_bkg {
+	background: #f2f2f2!important;
+}
+
+.grey_bkg2 {
+	background: #f9f9f9;
+}
+
+.whiteBkg {
+	background: #fff;
+}
+
+.orange_bkg {
+	background: #E17800
+}
+
+.green_bkg {
+	background: #00843D
+}
+
+Typography 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Veneer', arial, sans-serif;
+	font-weight: 400;
+	line-height: 1.1;
+	text-rendering: optimizeLegibility;
+	margin: 12px 0 12px 0;
+	text-transform: uppercase;
+	color: #0072CE;
+	letter-spacing: 0.7px
+}
+
+p {
+	margin: 0 0 18px;
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+
+p.lead,
+.lead p {
+	font-size: 20px;
+	font-size: 2.0rem;
+	letter-spacing: 0.25px
+}
+
+p.small {
+	font-size: 85%;
+}
+
+Links
+
+a {
+	color: #0072CE;
+	text-decoration: none;
+	line-height: inherit;
+	cursor: pointer;
+}
+
+a:hover {
+	color: #243C4B;
+}
+
+a:focus {
+	outline: none;
+}
+
+a.active {
+	color: #0072CE;
+}
+
+p a,
+p a:visited {
+	line-height: inherit;
+}
+
+Margining .content {
+	background: inherit;
+	margin: 0 auto;
+	padding-bottom: 40px;
+	padding-top: 44px
+}
+
+.content-sm {
+	background: inherit;
+	margin: 0 auto;
+	padding-bottom: 24px;
+	padding-top: 28px
+}
+
+.content-top {
+	background: inherit;
+	margin: 0 auto;
+	padding-bottom: 0px;
+	padding-top: 44px!important;
+}
+
+.content-bottom {
+	background: inherit;
+	margin: 0 auto;
+	padding-bottom: 44px;
+	padding-top: 0px
+}
+
+Alignment
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+img.alignRight {
+	float: right;
+	display: block;
+	margin: 0px 0px 9px 15px;
+}
+
+img.alignLeft {
+	float: left;
+	display: block;
+	margin: 0px 15px 9px 0px;
+}
+
+img.alignCenter {
+	float: none;
+	display: block;
+	margin: 0 auto 9px auto;
+}
+
+img.corp-logo {
+	margin-bottom: 15px;
+}
+
+img.fullWidth {
+	float: none;
+	display: block;
+	margin: 30px auto;
+}
+
+img.fullPageWidth {
+	float: none;
+	display: block;
+	margin: 30px auto;
+	width: 100%;
+}
+
+img.bordered {
+	border: 1px solid #ddd;
+}
+
+img.block {
+	margin: 0 0 18px;
+	display: block;
+}
+
+Buttons
+
+.button {
+	background-color: #0072ce;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 15px;
+	font-size: 1.5rem;
+	letter-spacing: 1px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 6px;
+	padding: 8px 24px;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-transition: background-color 0.15s ease-in-out;
+	-moz-transition: background-color 0.15s ease-in-out;
+	-o-transition: background-color 0.15s ease-in-out;
+	transition: background-color 0.15s ease-in-out;
+	border: 2px solid #0072c3;
+}
+
+.button-donate {
+	background: #F1C400;
+	color: #013d6d!important;
+	color: #000!important;
+	border: 2px solid #F1C400;
+	text-shadow: none;
+}
+
+.button-biaag {
+	background: #EF008C;
+	color: #fff;
+	border: 2px solid #EF008C;
+}
+
+.button-white {
+	background: #fff;
+	color: #0072CE;
+	border: 2px solid #fff;
+}
+
+.button-blue {
+	background: #0072ce!important;
+	color: #fff!important;
+	border: 2px solid #0072ce!important;
+}
+
+.button-white-biaag {
+	background: #fff;
+	color: #EF008C;
+	border: 2px solid #fff;
+}
+
+.button-green {
+	background: #00843d;
+	color: #fff;
+	border: 2px solid #00843d;
+}
+
+.button-green:hover {
+	background: #fff;
+	color: #00843d;
+	border: 2px solid #00843d;
+}
+
+Shapes
+
+.radius {
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.round {
+	webkit-border-radius: 1000px;
+	border-radius: 1000px;
+}
+
+.square {
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+}
+
+.pill {
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+}
+
+Misc
+
+.hide {
+	display: none;
+}
+
+.highlight {
+	background: #ff3;
+}
+
+.highlight2 {
+	background: #D9EDF7;
+	color: #111;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.block {
+	display: block;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.relative {
+	position: relative;
+}
+
+.static {
+	position: static!important;
+}
+
+.inline {
+	display: inline;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+Highlights Highlights are background stripes for certain words The general pattern is: <span class="highlight ">12 MILLION GIRLS</span>Or if you want a pink on user: <span class="highlight biaag">12 MILLION GIRLS</span>Media queries
+/*General set up defaults for mediaqueries*/
+
+.hide-on-desktop {
+	display: none !important;
+}
+
+.show-on-desktop {
+	display: inherit !important;
+}
+
+.show-on-medium {
+	display: none !important;
+}
+
+.show-on-small {
+	display: none !important;
+}
+
+.show-on-mobile {
+	display: none;
+}
+
+.show-on-tablet {
+	display: none !important;
+}
+
+Collapsing the grid
+/*these styles are for tablets they are applied when screen is smaller that 830px*/
+
+.show-on-desktop {
+	: none !important;
+}
+
+.hide-on-desktop {
+	display: inherit !important;
+}
+
+.show-on-medium {
+	display: inherit !important;
+}
+
+.hide-on-medium {
+	display: none !important;
+}
+
+.show-on-mobile {
+	display: block!important;
+}
+
+.hide-on-mobile {
+	display: none!important;
+}
+
+.show-on-medium.show-on-small {
+	display: inherit!important;
+}
+
+.show-on-small {
+	display: none !important;
+}
+
+.two-on-medium {
+	width: 16.666%;
+	float: left!important;
+}
+
+.three-on-medium {
+	width: 25%;
+	float: left!important;
+}
+
+.four-on-medium {
+	width: 33.3%;
+	float: left!important;
+}
+
+.five-on-medium {
+	width: 41.666%;
+	float: left!important;
+}
+
+.six-on-medium {
+	width: 50%;
+	float: left!important;
+}
+
+.seven-on-medium {
+	width: 58.333%;
+	float: left!important;
+}
+
+.eight-on-medium {
+	width: 66.6%;
+	float: left!important;
+}
+
+.nine-on-medium {
+	width: 75%;
+	float: left!important;
+}
+
+.ten-on-medium {
+	width: 83.33%;
+	float: left!important;
+}
+
+.twelve-on-medium {
+	width: 100%;
+	float: none!important;
+	clear: both;
+}
+
+img.img-full {
+	width: 100%;
+}
+
+img.normal-size {
+	width: auto!important;
+}
+
+
+/*these styles are for phones they are applied when screen is smaller that 505px*/
+
+.show-on-small {
+	display: inherit !important;
+}
+
+.hide-on-small {
+	display: none !important;
+}
+
+.hide-on-desktop {
+	display: inherit !important;
+}
+
+.show-on-medium {
+	display: none !important;
+}
+
+.hide-on-medium {
+	display: none !important;
+}
+
+.show-on-tablet {
+	display: inherit !important;
+}
+
+.two-on-small {
+	width: 16.6666%;
+	float: left!important;
+}
+
+.three-on-small {
+	width: 25%;
+	float: left!important;
+}
+
+.four-on-small {
+	width: 33.3%;
+	float: left!important;
+}
+
+.five-on-small {
+	width: 41.66%;
+	float: left!important;
+}
+
+.six-on-small {
+	width: 50%;
+	float: left!important;
+}
+
+.seven-on-small {
+	width: 58.33%;
+	float: left!important;
+}
+
+.eight-on-small {
+	width: 66.66%;
+	float: left!important;
+}
+
+.nine-on-small {
+	width: 75%;
+	float: left!important;
+}
+
+.ten-on-small {
+	width: 83.33%;
+	float: left!important;
+}
+
+.eleven-on-small {
+	width: 91.66%;
+	float: left!important;
+}
+
+.twelve-on-small {
+	width: 100%;
+	float: none!important;
+}
